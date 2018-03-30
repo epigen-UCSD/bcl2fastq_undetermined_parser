@@ -1,6 +1,5 @@
 #!/bin/python2
 from HTMLParser import HTMLParser
-from bs4 import BeautifulSoup
 import sys
 import argparse
 
