@@ -100,10 +100,12 @@ def main():
      for k,v in  un_dic.items():
          if len(k)==1:
              print '{}:{}'.format(k[0],v)
-             print '{}:{}'.format(b_dic_rev[k[0]],v)             
+             print '{}:{}'.format(b_dic_rev[k[0]] if k[0] in b_dic_rev.keys() else k[0],v)             
          else:
              print '{},{}:{}'.format(k[0],k[1],v)
-             print '{},{}:{}'.format(b_dic_rev[k[0]],b_dic_rev[k[1]],v)             
+             print '{},{}:{}'.format(b_dic_rev[k[0]] if k[0] in b_dic_rev.keys() else k[0],
+                                     b_dic_rev[k[1]] if k[1] in b_dic_rev.keys() else k[1],
+                                     v)             
 
 
 
